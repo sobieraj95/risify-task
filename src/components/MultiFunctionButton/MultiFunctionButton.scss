@@ -1,0 +1,141 @@
+.button {
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  gap: 6px;
+
+  padding: 14px 24px;
+  border-radius: 24px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25em;
+  letter-spacing: -0.48px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  &.block {
+    width: 100%;
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.orange {
+    background: rgba(255, 191, 82, 1);
+    color: #113a29;
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 215, 136, 1);
+
+      &.outlined {
+        background: rgba(255, 215, 136, 0.4);
+      }
+    }
+  }
+
+  &.red {
+    background: rgba(245, 85, 85, 1);
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+
+    &:hover,
+    &:focus {
+      background: rgba(252, 109, 109, 1);
+
+      &.outlined {
+        background: rgba(252, 109, 109, 0.4);
+      }
+    }
+  }
+
+  &.green {
+    background: rgba(48, 164, 122, 1);
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background: rgba(61, 198, 150, 1);
+
+      &.outlined {
+        background: rgba(61, 198, 150, 0.4);
+      }
+    }
+  }
+
+  &.dark-green {
+    background: rgba(17, 58, 41, 1);
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background: rgba(35, 88, 64, 1);
+
+      &.outlined {
+        background: rgba(35, 88, 64, 0.4);
+      }
+    }
+  }
+
+  &.dark-orange {
+    background: rgba(194, 102, 78, 1);
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background: rgba(222, 138, 116, 1);
+
+      &.outlined {
+        background: rgba(222, 138, 116, 0.4);
+      }
+    }
+  }
+
+  &.small {
+    padding: 10px 16px;
+    border-radius: 20px;
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: -0.42px;
+  }
+
+  // &.regular {
+  //   padding: 14px 24px;
+  //   border-radius: 24px;
+
+  //   font-size: 16px;
+  //   font-weight: 600;
+  //   line-height: 1.25em;
+  //   letter-spacing: -0.48px;
+  // }
+
+  &.large {
+    padding: 16px 24px;
+    border-radius: 28px;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35em;
+    letter-spacing: -0.54px;
+  }
+
+  &.outlined {
+    border: 1px solid #113a29;
+    background: #fff;
+    color: #113a29;
+  }
+}
