@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import MultiFunctionButton from '../components/MultiFunctionButton/MultiFunctionButton.vue'
+import { ButtonVariants } from '../components/MultiFunctionButton/MultiFunctionButtonTypes'
 </script>
 
 <template>
   <div class="router-view">
-    <MultiFunctionButton class="regular green" to="/"> Wróć</MultiFunctionButton>
+    <MultiFunctionButton :variants="[ButtonVariants.GREEN]" to="/">Wróć</MultiFunctionButton>
   </div>
 </template>
 

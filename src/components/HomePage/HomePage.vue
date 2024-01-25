@@ -1,234 +1,132 @@
 <script setup lang="ts">
 import MultiFunctionButton from '../MultiFunctionButton/MultiFunctionButton.vue'
+import { ButtonVariants } from '../MultiFunctionButton/MultiFunctionButtonTypes'
 </script>
-
 <template>
   <div class="homepage">
     <div class="homepage__header">Buttony</div>
     <div class="homepage__row">
-      <MultiFunctionButton class="small dark-orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="dark-orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large dark-orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="small dark-orange outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="dark-orange outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large dark-orange outlined">Wybierz teraz</MultiFunctionButton>
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton class="small red">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="red">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton disabled class="large red">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="small red outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="red outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large red outlined">Wybierz teraz</MultiFunctionButton>
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton class="small green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="small green outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="green outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large green outlined">Wybierz teraz</MultiFunctionButton>
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton class="small orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton disabled class="small orange outlined"
+      <MultiFunctionButton :variants="[ButtonVariants.SMALL, ButtonVariants.DARKORANGE]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
+      >
+      <MultiFunctionButton :variants="[ButtonVariants.GREEN]">Wybierz teraz</MultiFunctionButton>
+      <MultiFunctionButton :variants="[ButtonVariants.LARGE, ButtonVariants.RED]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
+      >
+      <MultiFunctionButton
+        :variants="[ButtonVariants.SMALL, ButtonVariants.DARKGREEN, ButtonVariants.OUTLINED]"
         >Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton class="orange outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large orange outlined">Wybierz teraz</MultiFunctionButton>
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton class="small dark-green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton disabled class="dark-green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large dark-green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="small dark-green outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton disabled class="dark-green outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton class="large dark-green outlined">Wybierz teraz</MultiFunctionButton>
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton disabled class="dark-green block">Wybierz teraz</MultiFunctionButton>
-    </div>
-    <div class="homepage__header">Linki</div>
-    <div class="homepage__row">
-      <MultiFunctionButton href="https://www.google.pl/" class="small dark-orange"
-        >Wybierz teraz</MultiFunctionButton
+      <MultiFunctionButton :variants="[ButtonVariants.ORANGE, ButtonVariants.OUTLINED]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton href="https://www.google.pl/" class="dark-orange"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton disabled href="https://www.google.pl/" class="large dark-orange"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="small dark-orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="dark-orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="large dark-orange outlined"
+      <MultiFunctionButton
+        disabled
+        :variants="[ButtonVariants.LARGE, ButtonVariants.DARKORANGE, ButtonVariants.OUTLINED]"
         >Wybierz teraz</MultiFunctionButton
       >
     </div>
+    <div class="homepage__header">HTML Link</div>
     <div class="homepage__row">
-      <MultiFunctionButton href="https://www.google.pl/" class="small red"
+      <MultiFunctionButton
+        href="https://www.google.pl/"
+        :variants="[ButtonVariants.SMALL, ButtonVariants.ORANGE]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
+      >
+      <MultiFunctionButton href="https://www.google.pl/" :variants="[ButtonVariants.GREEN]"
         >Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton href="https://www.google.pl/" class="red"
+      <MultiFunctionButton
+        href="https://www.google.pl/"
+        disabled
+        :variants="[ButtonVariants.LARGE, ButtonVariants.GREEN]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
+      >
+      <MultiFunctionButton
+        href="https://www.google.pl/"
+        :variants="[ButtonVariants.SMALL, ButtonVariants.DARKGREEN, ButtonVariants.OUTLINED]"
         >Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton href="https://www.google.pl/" class="large red"
-        >Wybierz teraz</MultiFunctionButton
+      <MultiFunctionButton
+        href="https://www.google.pl/"
+        :variants="[ButtonVariants.ORANGE, ButtonVariants.OUTLINED]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton href="https://www.google.pl/" class="small red outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="red outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton disabled href="https://www.google.pl/" class="large red outlined"
+      <MultiFunctionButton
+        href="https://www.google.pl/"
+        disabled
+        :variants="[ButtonVariants.LARGE, ButtonVariants.DARKORANGE, ButtonVariants.OUTLINED]"
         >Wybierz teraz</MultiFunctionButton
       >
     </div>
+    <div class="homepage__header">ROUTER Link</div>
     <div class="homepage__row">
-      <MultiFunctionButton href="https://www.google.pl/" class="small green"
+      <MultiFunctionButton to="router" :variants="[ButtonVariants.ORANGE]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
+      >
+      <MultiFunctionButton to="router" :variants="[ButtonVariants.ORANGE]"
         >Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton href="https://www.google.pl/" class="green"
+      <MultiFunctionButton
+        to="router"
+        disabled
+        :variants="[ButtonVariants.LARGE, ButtonVariants.DARKORANGE]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
+      >
+      <MultiFunctionButton
+        to="router"
+        :variants="[ButtonVariants.DARKGREEN, ButtonVariants.OUTLINED]"
         >Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton href="https://www.google.pl/" class="large green"
+      <MultiFunctionButton to="router" :variants="[ButtonVariants.ORANGE, ButtonVariants.OUTLINED]"
+        ><img
+          src="https://play-lh.googleusercontent.com/-APO0naWRDPq2um-x4BJII4piuCopjvFRTOE6X7OIAdFHcLnvP5kP4BTB7MLxb_Q_6BE"
+          width="16px"
+          height="16px"
+        />Wybierz teraz</MultiFunctionButton
+      >
+      <MultiFunctionButton
+        to="router"
+        disabled
+        :variants="[ButtonVariants.LARGE, ButtonVariants.DARKORANGE, ButtonVariants.OUTLINED]"
         >Wybierz teraz</MultiFunctionButton
       >
-      <MultiFunctionButton href="https://www.google.pl/" class="small green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="large green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton href="https://www.google.pl/" class="small orange"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="orange"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="large orange"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="small orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="large orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton href="https://www.google.pl/" class="small dark-green"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="dark-green"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="large dark-green"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="small dark-green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="dark-green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton href="https://www.google.pl/" class="large dark-green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton href="https://www.google.pl/" class="dark-green block"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__header">router-link</div>
-    <div class="homepage__row">
-      <MultiFunctionButton to="router" class="small dark-orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="dark-orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton disabled to="router" class="large dark-orange"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="small dark-orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="dark-orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="large dark-orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton to="router" class="small red">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="red">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="large red">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="small red outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="red outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton disabled to="router" class="large red outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton to="router" class="small green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="large green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="small green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="green outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="large green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton to="router" class="small orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="large orange">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="small orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="orange outlined">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="large orange outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton to="router" class="small dark-green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="dark-green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="large dark-green">Wybierz teraz</MultiFunctionButton>
-      <MultiFunctionButton to="router" class="small dark-green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="dark-green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-      <MultiFunctionButton to="router" class="large dark-green outlined"
-        >Wybierz teraz</MultiFunctionButton
-      >
-    </div>
-    <div class="homepage__row">
-      <MultiFunctionButton to="router" class="dark-green block">Wybierz teraz</MultiFunctionButton>
     </div>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './HomePage.scss';
 </style>

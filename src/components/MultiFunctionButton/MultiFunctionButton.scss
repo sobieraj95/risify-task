@@ -1,4 +1,25 @@
 .button {
+  --font-family-primary: 'Montserrat';
+  --font-family-secondary: 'Poppins';
+  --font-color-primary: #fff;
+  --font-color-secondary: #113a29;
+
+  --background-orange-primary: rgba(255, 191, 82, 1);
+  --background-orange-secondary: rgba(255, 215, 136, 1);
+  --background-orange-tertiary: rgba(255, 215, 136, 0.4);
+  --background-red-primary: rgba(245, 85, 85, 1);
+  --background-red-secondary: rgba(252, 109, 109, 1);
+  --background-red-tertiary: rgba(252, 109, 109, 0.4);
+  --background-green-primary: rgba(48, 164, 122, 1);
+  --background-green-secondary: rgba(61, 198, 150, 1);
+  --background-green-tertiary: rgba(61, 198, 150, 0.4);
+  --background-darkgreen-primary: rgba(17, 58, 41, 1);
+  --background-darkgreen-secondary: rgba(35, 88, 64, 1);
+  --background-darkgreen-tertiary: rgba(35, 88, 64, 0.4);
+  --background-darkorange-primary: rgba(194, 102, 78, 1);
+  --background-darkorange-secondary: rgba(222, 138, 116, 1);
+  --background-darkorange-tertiary: rgba(222, 138, 116, 0.4);
+
   transition: all 0.2s ease;
   display: flex;
   justify-content: center;
@@ -9,9 +30,7 @@
   padding: 14px 24px;
   border-radius: 24px;
 
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.25em;
+  font: normal normal 600 16px/1.25em var(--font-family-primary);
   letter-spacing: -0.48px;
 
   &:hover,
@@ -30,74 +49,71 @@
   }
 
   &.orange {
-    background: rgba(255, 191, 82, 1);
-    color: #113a29;
+    background: var(--background-orange-primary);
+    color: var(--font-color-secondary);
 
     &:hover,
     &:focus {
-      background: rgba(255, 215, 136, 1);
+      background: var(--background-orange-secondary);
 
       &.outlined {
-        background: rgba(255, 215, 136, 0.4);
+        background: var(--background-orange-tertiary);
       }
     }
   }
 
   &.red {
-    background: rgba(245, 85, 85, 1);
-    color: #fff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    -webkit-text-stroke-width: 1;
-    -webkit-text-stroke-color: #000;
+    background: var(--background-red-primary);
+    color: var(--font-color-primary);
 
     &:hover,
     &:focus {
-      background: rgba(252, 109, 109, 1);
+      background: var(--background-red-secondary);
 
       &.outlined {
-        background: rgba(252, 109, 109, 0.4);
+        background: var(--background-red-tertiary);
       }
     }
   }
 
   &.green {
-    background: rgba(48, 164, 122, 1);
-    color: #fff;
+    background: var(--background-green-primary);
+    color: var(--font-color-primary);
 
     &:hover,
     &:focus {
-      background: rgba(61, 198, 150, 1);
+      background: var(--background-green-secondary);
 
       &.outlined {
-        background: rgba(61, 198, 150, 0.4);
+        background: var(--background-green-tertiary);
       }
     }
   }
 
-  &.dark-green {
-    background: rgba(17, 58, 41, 1);
-    color: #fff;
+  &.darkgreen {
+    background: var(--background-darkgreen-primary);
+    color: var(--font-color-primary);
 
     &:hover,
     &:focus {
-      background: rgba(35, 88, 64, 1);
+      background: var(--background-darkgreen-secondary);
 
       &.outlined {
-        background: rgba(35, 88, 64, 0.4);
+        background: var(--background-darkgreen-tertiary);
       }
     }
   }
 
-  &.dark-orange {
-    background: rgba(194, 102, 78, 1);
-    color: #fff;
+  &.darkorange {
+    background: var(--background-darkorange-primary);
+    color: var(--font-color-primary);
 
     &:hover,
     &:focus {
-      background: rgba(222, 138, 116, 1);
+      background: var(--background-darkorange-secondary);
 
       &.outlined {
-        background: rgba(222, 138, 116, 0.4);
+        background: var(--background-darkorange-tertiary);
       }
     }
   }
@@ -106,36 +122,21 @@
     padding: 10px 16px;
     border-radius: 20px;
 
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4em;
+    font: normal normal 500 14px/1.4em var(--font-family-secondary);
     letter-spacing: -0.42px;
   }
-
-  // &.regular {
-  //   padding: 14px 24px;
-  //   border-radius: 24px;
-
-  //   font-size: 16px;
-  //   font-weight: 600;
-  //   line-height: 1.25em;
-  //   letter-spacing: -0.48px;
-  // }
 
   &.large {
     padding: 16px 24px;
     border-radius: 28px;
 
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.35em;
+    font: normal normal 600 18px/1.35em var(--font-family-primary);
     letter-spacing: -0.54px;
   }
 
   &.outlined {
     border: 1px solid #113a29;
     background: #fff;
-    color: #113a29;
+    color: var(--font-color-secondary);
   }
 }

@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { IProps } from './MultiFunctionButtonTypes'
 
-interface IProps {
-  class: string
-  disabled?: boolean
-  href?: string
-  to?: string
-}
 const props = defineProps<IProps>()
 
 const selectedComponent = computed(() => {
@@ -22,15 +17,15 @@ const onClick = () => {
   <component
     :is="selectedComponent"
     class="button"
-    :class="[props.class, props.disabled ? 'disabled' : '']"
+    :class="[props.variants, props.disabled ? 'disabled' : '']"
     :to="props.to && props.to"
     :href="props.href && props.href"
-    :disabled="props.disabled && 'disabled'"
+    :disabled="props.disabled"
     @click="onClick"
     ><slot
   /></component>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './MultiFunctionButton.scss';
 </style>
